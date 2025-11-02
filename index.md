@@ -11,7 +11,11 @@ title: Project Juni
 
 ## Our First Resource
 
-[Coming soon - but we're building this together]
+## Our First Resource
+
+[Getting Started with Community Self-Help](resources/getting-started)
+
+This is just the beginning. More resources coming as the community builds them.
 
 ## Get Involved
 
