@@ -1,3 +1,9 @@
-title: Project Juni
+title: JUNJ by Junioner
 description: Radical community education - free, open, together
-theme: minima
+github_url: https://github.com/junioner/juni-pi
+discord_url: https://discord.gg/your-invite
+
+# Uptime tracking (set last_shutdown_date to now when site goes down)
+last_shutdown_date: "2025-11-02T00:00:00Z"
+# Record uptime in milliseconds (current record: ~30 days = 2592000000)
+record_uptime_ms: 2592000000

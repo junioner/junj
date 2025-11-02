@@ -1,0 +1,35 @@
+<section class="tool-of-week">
+  <header>
+    <h2>TOOL OF THE WEEK — {{ page.title }}</h2>
+    <p class="meta">{{ page.date | date: "%Y-%m-%d" }} &nbsp; • &nbsp; {{ page.category | upcase }} &nbsp; • &nbsp; {{ page.platforms | join: ', ' }}</p>
+  </header>
+
+  {% if page.image %}
+  <div class="tool-media">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }} screenshot" class="tool-image">
+  </div>
+  {% endif %}
+
+  <p class="lead">{{ page.description }}</p>
+
+  <ul class="tool-meta">
+    <li><strong>License:</strong> {{ page.license }}</li>
+    <li><strong>Repo / Site:</strong> <a href="{{ page.repo }}">{{ page.repo }}</a></li>
+    {% if page.tags %}<li><strong>Tags:</strong> {{ page.tags | join: ', ' }}</li>{% endif %}
+  </ul>
+
+  {% if page.why %}
+  <div class="callout">
+    <strong>Why it matters:</strong>
+    <div class="why">{{ page.why }}</div>
+  </div>
+  {% endif %}
+
+  {% if page.mastodon %}
+  <div class="mastodon-template">
+    <strong>Mastodon post (copy):</strong>
+    <pre>{{ page.mastodon }}</pre>
+  </div>
+  {% endif %}
+
+</section>
