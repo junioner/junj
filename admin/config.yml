@@ -1,3 +1,6 @@
+---
+# This front matter enables Jekyll to process Liquid in this file
+---
 backend:
   name: git-gateway
   branch: main
@@ -6,7 +9,7 @@ backend:
 # local_backend: true
 
 media_folder: "assets/images"
-public_folder: "/junj/assets/images"
+public_folder: "{{ '/assets/images' | relative_url }}"
 
 collections:
   - name: "resources"

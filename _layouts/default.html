@@ -44,15 +44,25 @@
     </div>
     <script src="{{ '/assets/js/uptime.js' | relative_url }}"></script>
     <script>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/junj/admin/";
-                    });
-                }
-            });
-        }
+        // Netlify Identity login -> redirect to the correct admin path respecting baseurl
+        (function() {
+            function getBase() {
+                var meta = document.querySelector('meta[name="site-base"]');
+                var base = meta ? meta.getAttribute('content') : '/';
+                if (!base) base = '/';
+                if (base.charAt(base.length - 1) !== '/') base += '/';
+                return base;
+            }
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on('init', function(user) {
+                    if (!user) {
+                        window.netlifyIdentity.on('login', function() {
+                            document.location.href = getBase() + 'admin/';
+                        });
+                    }
+                });
+            }
+        })();
     </script>
 </body>
 </html>
