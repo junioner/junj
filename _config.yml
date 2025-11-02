@@ -1,5 +1,7 @@
 title: JUNJ by Junioner
 description: Radical community education - free, open, together
+url: "https://junioner.github.io"
+baseurl: "/junj"
 github_url: https://github.com/junioner/juni-pi
 discord_url: https://discord.gg/your-invite
 

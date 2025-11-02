@@ -13,6 +13,7 @@ GEM
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
     ffi (1.17.2-x64-mingw-ucrt)
+    fiddle (1.1.8)
     forwardable-extended (2.6.0)
     http_parser.rb (0.8.0)
     i18n (1.14.7)
@@ -69,6 +70,7 @@ PLATFORMS
 DEPENDENCIES
   base64 (~> 0.1.1)
   bigdecimal
+  fiddle
   jekyll
   kramdown-parser-gfm
   logger
