@@ -7,3 +7,9 @@ discord_url: https://discord.gg/your-invite
 last_shutdown_date: "2025-11-02T00:00:00Z"
 # Record uptime in milliseconds (current record: ~30 days = 2592000000)
 record_uptime_ms: 2592000000
+
+# Content collections
+collections:
+  resources:
+    output: true
+    permalink: /resources/:path/

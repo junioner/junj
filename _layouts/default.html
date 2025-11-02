@@ -12,6 +12,7 @@
     {% if page.image %}
     <meta property="og:image" content="{{ page.image | absolute_url }}">
     {% endif %}
+    <meta name="site-base" content="{{ '/' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
 </head>

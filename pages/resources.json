@@ -1,0 +1,15 @@
+---
+layout: null
+permalink: /resources.json
+---
+[
+{% assign docs = site.resources | sort: 'title' %}
+{% for res in docs %}
+  {
+    "title": {{ res.title | jsonify }},
+    "url": {{ res.url | absolute_url | jsonify }},
+    "description": {{ res.description | default: '' | jsonify }},
+    "tags": {{ res.tags | default: empty | jsonify }}
+  }{% if forloop.last %}{% else %},{% endif %}
+{% endfor %}
+]

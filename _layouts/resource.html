@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="resource" role="article" aria-labelledby="resource-title">
+  <header>
+    <h1 id="resource-title">{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="resource-desc">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <section class="resource-body">
+    {{ content }}
+  </section>
+
+  {% if page.tags %}
+  <footer class="resource-footer">
+    <p class="resource-tags" aria-label="Tags">
+      {% for t in page.tags %}
+        <a class="resource-tag" href="{{ '/tags/?tag=' | relative_url }}{{ t | uri_escape }}">{{ t }}</a>
+      {% endfor %}
+    </p>
+  </footer>
+  {% endif %}
+</article>

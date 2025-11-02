@@ -13,8 +13,24 @@
     </a>
     <div class="site-slogan" role="note" aria-label="Site slogan">
       <div>[radical resources for people who are more than datasets]</div>
-      <div>[radical resources for you] [<span class="slogan-em"></span>resist being reduced</span>]</div>
+      <div>[radical resources for you] [<span class="slogan-em">resist being reduced</span>]</div>
     </div>
     <div class="ascii-divider">~"~._.~"~._.~"~._.~"~._.~"~._.~"~</div>
+    <nav class="main-nav" role="navigation" aria-label="Main">
+      <ul class="nav-icons">
+        <li><a href="{{ '/create/' | relative_url }}" class="nav-icon">CREATE/</a></li>
+        <li><a href="{{ '/build/' | relative_url }}" class="nav-icon">BUILD/</a></li>
+        <li><a href="{{ '/connect/' | relative_url }}" class="nav-icon">COMMUNITY/</a></li>
+        <li><a href="{{ '/news/' | relative_url }}" class="nav-icon">NEWS/</a></li>
+        <li><a href="{{ '/about/' | relative_url }}" class="nav-icon">ABOUT/</a></li>
+        <li><a href="{{ '/contribute/' | relative_url }}" class="nav-icon">CONTRIBUTE/</a></li>
+      </ul>
+
+      <form name="tag-search" action="{{ '/tags/' | relative_url }}" method="get" class="tag-search">
+        <label for="tag-search-q" class="visually-hidden">Search resources</label>
+        <input id="tag-search-q" name="q" type="search" placeholder="Search tags or resources…" aria-label="Search tags or resources">
+        <button type="submit">Search</button>
+      </form>
+    </nav>
   </div>
 </header>

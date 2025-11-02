@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Project Juni</title>
+    <title>Home | JUNJ by Junioner</title>
     <meta name="description" content="Radical community education - free, open, together">
-    <meta property="og:title" content="Home | Project Juni">
+    <meta property="og:title" content="Home | JUNJ by Junioner">
     <meta property="og:description" content="Radical community education - free, open, together">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://localhost:4000/">
     
+    <meta name="site-base" content="/">
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="canonical" href="http://localhost:4000/">
 </head>
@@ -30,28 +31,31 @@
     </a>
     <div class="site-slogan" role="note" aria-label="Site slogan">
       <div>[radical resources for people who are more than datasets]</div>
-      <div>[radical resources for you] [<span class="slogan-em"></span>resist being reduced</span>]</div>
+      <div>[radical resources for you] [<span class="slogan-em">resist being reduced</span>]</div>
     </div>
     <div class="ascii-divider">~"~._.~"~._.~"~._.~"~._.~"~._.~"~</div>
+    <nav class="main-nav" role="navigation" aria-label="Main">
+      <ul class="nav-icons">
+        <li><a href="/create/" class="nav-icon">CREATE/</a></li>
+        <li><a href="/build/" class="nav-icon">BUILD/</a></li>
+        <li><a href="/connect/" class="nav-icon">COMMUNITY/</a></li>
+        <li><a href="/news/" class="nav-icon">NEWS/</a></li>
+        <li><a href="/about/" class="nav-icon">ABOUT/</a></li>
+        <li><a href="/contribute/" class="nav-icon">CONTRIBUTE/</a></li>
+      </ul>
+
+      <form name="tag-search" action="/tags/" method="get" class="tag-search">
+        <label for="tag-search-q" class="visually-hidden">Search resources</label>
+        <input id="tag-search-q" name="q" type="search" placeholder="Search tags or resources…" aria-label="Search tags or resources">
+        <button type="submit">Search</button>
+      </form>
+    </nav>
   </div>
 </header>
 
         
         <main class="content">
-            <div class="home-nav">
-    <div class="nav-links">
-        <a href="/directory/" class="nav-link">DIR/</a>
-        <a href="/create/" class="nav-link">CREATE/</a>
-        <a href="/build/" class="nav-link">BUILD/</a>
-        <a href="/submit/" class="nav-link">SUBMIT/</a>
-        <a href="/about/" class="nav-link">INFO</a>
-    </div>
-    <div class="nav-meta">
-        <span class="nav-timestamp">2025-11-02</span>
-    </div>
-</div>
-
-<blockquote>
+            <blockquote>
   <p>“Happiness is a flame that can light many candles” - Buddha</p>
 </blockquote>
 
@@ -69,16 +73,16 @@
 
         <footer class="footer">
             <div class="footer-content" role="contentinfo">
-                <p>© 2025 Project Juni — built with Jekyll</p>
+                <p>© 2025 JUNJ by Junioner — built with Jekyll</p>
                 <nav class="footer-links" aria-label="Site footer links">
                     <a href="/feed.xml">RSS</a>
-                    
-                    
+                    <span aria-hidden="true">·</span> <a href="https://github.com/junioner/juni-pi" rel="me noopener" target="_blank">GitHub</a>
+                    <span aria-hidden="true">·</span> <a href="https://discord.gg/your-invite" rel="me noopener" target="_blank">Discord</a>
                     <span aria-hidden="true">·</span> <a href="/credits/">Credits</a>
                 </nav>
                 <div class="uptime-counters">
                     <div class="uptime-line">
-                        [<span id="uptime-current" data-start-time="">calculating...</span> since last shutdown]
+                        [<span id="uptime-current" data-start-time="2025-11-02T00:00:00Z">calculating...</span> since last shutdown]
                     </div>
                 </div>
             </div>

@@ -595,4 +595,67 @@ pre code {
     padding: 0.5rem;
     color: #c9a66b;
 }
+/* Ensure ASCII hero never shows a horizontal scrollbar */
+.hero pre {
+    overflow: visible;
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+/* --- Search & Tags styles --- */
+.main-nav {
+    margin: 0.5rem auto 0.75rem;
+    text-align: center;
+}
+.nav-icons {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(8ch, 1fr));
+    gap: 0.5rem 1.25rem;
+    padding: 0;
+    margin: 0.25rem auto 0.5rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 24rem;
+}
+.nav-icons li { text-align: center; }
+.nav-icon {
+    display: block;
+    text-decoration: none;
+    color: #c9a66b; /* tan */
+    border-bottom: none;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.02em;
+    padding: 0.15rem 0.25rem;
+}
+.nav-icon:hover { color: #d896ff; }
+
+.tag-search { display: flex; gap: 0.5rem; align-items: center; justify-content: center; margin-top: 0.5rem; }
+.tag-search input[type="search"] {
+    padding: 0.4rem;
+    width: 100%;
+    max-width: 28rem;
+    border: 1px solid #8b6f47;
+    background: transparent;
+    color: #c9a66b;
+}
+.tag-search button { padding: .35rem .6rem; background: #2d1b3d; border: 1px solid #8b6f47; color: #d896ff; }
+.tag-search button:hover { border-color: #9b72cf; }
+
+.visually-hidden { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.tags-results-list { list-style: none; padding: 0; margin: 0.5rem 0; }
+.tags-item { padding: 0.5rem 0; border-bottom: 1px solid #8b6f47; }
+.tags-item-title { font-weight: 700; color: #d896ff; text-decoration: none; border-bottom: none; }
+.tags-item-desc { color: #c9a66b; margin: 0.25rem 0; font-family: 'Courier New', monospace; }
+.tags-item-tags { margin: 0.25rem 0; font-size: 0.9rem; color: #c9a66b; }
+.tag-link, .resource-tag { display:inline-block; padding:0.1rem 0.4rem; margin-right:0.35rem; background:#1a1625; color:#c9a66b; text-decoration:none; border: 1px solid #8b6f47; border-radius:2px; }
+.tag-link:hover, .resource-tag:hover { background:#2d1b3d; }
+
+.resource-desc { color: #c9a66b; margin: 0.25rem 0 0.75rem; }
+.resource-footer { margin-top: 1rem; }
+
+@media (max-width: 768px) {
+    .nav-icons { gap: 0.5rem 1rem; }
+}
 
