@@ -269,6 +269,68 @@ a:hover {
     .tool-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Mobile hero optimizations */
+    .hero pre {
+        font-size: 0.5rem;
+        line-height: 1;
+        margin: 0.15rem 0 0.25rem;
+    }
+
+    .site-slogan {
+        font-size: 0.875rem;
+        line-height: 1.4;
+        padding: 0 0.5rem;
+    }
+
+    .ascii-divider {
+        font-size: 0.8rem;
+        margin: 0.35rem 0;
+    }
+
+    /* Mobile navigation */
+    .home-nav .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .home-nav .nav-meta {
+        font-size: 0.75rem;
+    }
+
+    /* Mobile footer */
+    .footer {
+        padding: 1.5rem 0;
+    }
+
+    .footer-content {
+        font-size: 0.8rem;
+    }
+
+    .footer-links {
+        font-size: 0.85rem;
+        gap: 0.5rem;
+        flex-direction: column;
+        margin-top: 0.75rem;
+    }
+
+    .footer-links span[aria-hidden="true"] {
+        display: none;
+    }
+
+    .uptime-counters {
+        font-size: 0.75rem;
+        margin-top: 0.5rem;
+    }
+
+    /* Mobile content spacing */
+    .content {
+        padding: 1rem 0;
+    }
+
+    .container {
+        padding: 0 0.75rem;
+    }
 }
 
 /* Terminal Headers */
