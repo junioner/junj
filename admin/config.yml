@@ -1,0 +1,69 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Local backend for testing - uncomment and run `npx decap-server` to test locally
+# local_backend: true
+
+media_folder: "assets/images"
+public_folder: "/junj/assets/images"
+
+collections:
+  - name: "resources"
+    label: "Resources"
+    folder: "resources"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "resource"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "index.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      
+      - label: "About"
+        name: "about"
+        file: "pages/about.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/about/"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      
+      - label: "News"
+        name: "news"
+        file: "pages/news.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/news/"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      
+      - label: "Contribute"
+        name: "contribute"
+        file: "pages/contribute.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/contribute/"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      
+      - label: "Credits"
+        name: "credits"
+        file: "pages/credits.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/credits/"}
+          - {label: "Body", name: "body", widget: "markdown"}

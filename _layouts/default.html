@@ -15,6 +15,7 @@
     <meta name="site-base" content="{{ '/' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
     <div class="container">
@@ -42,5 +43,16 @@
         </footer>
     </div>
     <script src="{{ '/assets/js/uptime.js' | relative_url }}"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/junj/admin/";
+                    });
+                }
+            });
+        }
+    </script>
 </body>
 </html>
